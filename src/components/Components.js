@@ -4,7 +4,8 @@ class Components extends Component {
   state = {
     message: ''
   }
-  render() {
+
+render() {
     return (
       <div>
         <h1>이벤트 연습</h1>
@@ -12,8 +13,19 @@ class Components extends Component {
           type="text"
           name="message"
           placeholder="아무거나 입력하세요"
-          onChange={(e) => {this.setState({message: e.target.value})}} 
+          onChange={
+            (e) => {this.setState({message: e.target.value});
+          console.log(this.state.message);}
+            
+          } 
         />
+        <button onClick={
+          (e) => {
+            alert(this.state.message);
+            this.setState({message: ""});
+            console.log(this.state.message);
+          }
+        }>확인</button>
       </div>
     );
   }

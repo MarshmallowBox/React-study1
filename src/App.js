@@ -7,6 +7,7 @@ import Counter from "./components/Counter"
 import UseState from "./components/UseState"
 import DataUse from "./components/DataUse"
 import Components from "./components/Components"
+import ComponentsOption from "./components/ComponentsOption"
 import "./App.css";
 function App() {
   const [movies, setMovies] = useState([]);
@@ -51,7 +52,7 @@ function App() {
       <UseState /><br /><br />
       <hr />
 
-      <Components /><br /><br />
+      <Components /><ComponentsOption /><br /><br />
       <hr />
       
       
