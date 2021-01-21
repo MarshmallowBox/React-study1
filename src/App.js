@@ -3,11 +3,18 @@ import React, { useEffect, useState } from "react";
 import Movie from "./components/Movie";
 import MovieForm from "./components/MovieForm";
 import Props from "./components/Props";
-import Counter from "./components/Counter"
-import UseState from "./components/UseState"
-import DataUse from "./components/DataUse"
-import Components from "./components/Components"
-import ComponentsOption from "./components/ComponentsOption"
+import Counter from "./components/Counter";
+import UseState from "./components/UseState";
+//import DataUse from "./components/DataUse";
+import Components from "./components/Components";
+import ComponentsClass from "./components/ComponentsClass";
+import ComponentsFunction from "./components/ComponentsFunction";
+import Iteration from "./components/Iteration";
+import ValidationSample from "./dom/ValidationSample";
+import Ref from "./dom/Ref";
+import ScrollBox from "./dom/ScrollBox";
+import LifeCycle from "./lifecycle/LifeCycle";
+import RandomColor from "./lifecycle/RandomColor";
 import "./App.css";
 function App() {
   const [movies, setMovies] = useState([]);
@@ -42,20 +49,56 @@ function App() {
       <br />
       <br />
       <hr />
-      
-      <Props name="React" favoriteNumber={3}>childrens</Props><br /><br />
+
+      <Props name="React" favoriteNumber={3}>
+        childrens
+      </Props>
+      <br />
+      <br />
       <hr />
 
-      <Counter /><br /><br />
+      <Counter />
+      <br />
+      <br />
       <hr />
 
-      <UseState /><br /><br />
+      <UseState />
+      <br />
+      <br />
       <hr />
 
-      <Components /><ComponentsOption /><br /><br />
+      <Components />
+      <ComponentsClass />
+      <ComponentsFunction />
+      <br />
+      <br />
       <hr />
-      
-      
+
+      <ValidationSample />
+      <br />
+      <br />
+      <hr />
+
+      <Ref />
+      <br />
+      <br />
+      <hr />
+
+      <ScrollBox ref={(ref) => (this.scrollBox = ref)} />
+      <button onClick={() => this.scrollBox.scrollToBottom()}>밑으로</button>
+      <br />
+      <br />
+      <hr />
+
+      <Iteration />
+      <br />
+      <br />
+      <hr />
+
+      <LifeCycle />
+      <br />
+      <br />
+      <hr />
     </>
   );
 }
