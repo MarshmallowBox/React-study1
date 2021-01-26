@@ -14,7 +14,9 @@ import ValidationSample from "./dom/ValidationSample";
 import Ref from "./dom/Ref";
 import ScrollBox from "./dom/ScrollBox";
 import LifeCycle from "./lifecycle/LifeCycle";
-import RandomColor from "./lifecycle/RandomColor";
+import ErrorBoundary from "./ErrorBoundary";
+import Info from "./hooks/Info";
+import ReducerCounter from "./hooks/ReducerCounter";
 import "./App.css";
 function App() {
   const [movies, setMovies] = useState([]);
@@ -94,8 +96,19 @@ function App() {
       <br />
       <br />
       <hr />
+      <ErrorBoundary>
+        <LifeCycle />
+      </ErrorBoundary>
+      <br />
+      <br />
+      <hr />
 
-      <LifeCycle />
+      <Info />
+      <br />
+      <br />
+      <hr />
+
+      <ReducerCounter />
       <br />
       <br />
       <hr />
