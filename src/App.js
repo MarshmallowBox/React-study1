@@ -17,6 +17,9 @@ import LifeCycle from "./lifecycle/LifeCycle";
 import ErrorBoundary from "./ErrorBoundary";
 import Info from "./hooks/Info";
 import ReducerCounter from "./hooks/ReducerCounter";
+import ReducerCounter2 from "./hooks/ReducerCounter2";
+import Average from "./hooks/Average";
+import SassComponent from "./style/SassComponent";
 import "./App.css";
 function App() {
   const [movies, setMovies] = useState([]);
@@ -49,69 +52,51 @@ function App() {
         {renderMovies}
       </div>
       <br />
-      <br />
       <hr />
-
       <Props name="React" favoriteNumber={3}>
         childrens
       </Props>
       <br />
-      <br />
       <hr />
-
       <Counter />
       <br />
-      <br />
       <hr />
-
       <UseState />
       <br />
-      <br />
       <hr />
-
       <Components />
       <ComponentsClass />
       <ComponentsFunction />
       <br />
-      <br />
       <hr />
-
       <ValidationSample />
       <br />
-      <br />
       <hr />
-
       <Ref />
       <br />
-      <br />
       <hr />
-
       <ScrollBox ref={(ref) => (this.scrollBox = ref)} />
       <button onClick={() => this.scrollBox.scrollToBottom()}>밑으로</button>
       <br />
-      <br />
       <hr />
-
       <Iteration />
-      <br />
       <br />
       <hr />
       <ErrorBoundary>
         <LifeCycle />
       </ErrorBoundary>
       <br />
-      <br />
       <hr />
-
       <Info />
       <br />
+      <hr />
+      <ReducerCounter />
+      <ReducerCounter2 />
       <br />
       <hr />
 
-      <ReducerCounter />
-      <br />
-      <br />
-      <hr />
+      <Average />
+      <SassComponent />
     </>
   );
 }
